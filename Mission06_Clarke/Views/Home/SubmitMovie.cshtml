@@ -1,0 +1,40 @@
+@model MovieSubmission
+
+<h2>Submit a Movie to Joel's Collection!</h2>
+
+<form method="post">
+    <label asp-for="Category">Category:</label>
+    <input asp-for="Category"/>
+    <br/>
+    <label asp-for="Title">Title:</label>
+    <input asp-for="Title"/>
+    <br/>
+    <label asp-for="Year">Year:</label>
+    <input asp-for="Year"/>
+    <br/>
+    <label asp-for="Director">Director:</label>
+    <input asp-for="Director"/>
+    <br/>
+    <label asp-for="Rating">Select the Movie's Rating:</label>
+    <select asp-for="Rating">
+        <option value="G">G</option>
+        <option value="PG">PG</option>
+        <option value="PG-13">PG-13</option>
+        <option value="R">R</option>
+    </select>
+    <br/>
+    <label asp-for="Edited">Was the Movie Edited?</label>
+    <select asp-for="Edited">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+    </select>
+    <br/>
+    <label asp-for="LentTo">Who have you lent this Movie to?</label>
+    <input asp-for="LentTo"/>
+    <br/>
+    <label asp-for="Notes">Notes:</label>
+    <input asp-for="Notes" maxlength="25"/>
+    <br />
+    
+    <button type="submit">Submit Movie</button>
+</form>
